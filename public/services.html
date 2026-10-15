@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div id="app-header"></div>
+  <div class="container">
+    <h2>🔧 Manage Services</h2>
+
+    <div class="card">
+      <h3>Add / Edit Service</h3>
+      <form id="serviceForm" class="form-grid">
+        <input id="name" placeholder="Service Name" required>
+        <textarea id="description" placeholder="Description" rows="2"></textarea>
+        <select id="category" required>
+          <option value="hardware">Hardware</option>
+          <option value="software">Software</option>
+          <option value="network">Network</option>
+          <option value="data_recovery">Data Recovery</option>
+          <option value="other">Other</option>
+        </select>
+        <input id="price" type="number" step="0.01" placeholder="Price (Rs.)" required>
+        <input id="estimated_hours" type="number" placeholder="Estimated Hours" value="1" required>
+        <button class="btn" type="submit">Save Service</button>
+        <button class="btn warn" type="button" id="resetBtn">Reset</button>
+      </form>
+      <div id="msg"></div>
+    </div>
+
+    <div class="card">
+      <table id="servicesTable">
+        <thead><tr>
+          <th>ID</th><th>Name</th><th>Category</th><th>Price</th>
+          <th>Est. Hours</th><th>Active</th><th>Actions</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

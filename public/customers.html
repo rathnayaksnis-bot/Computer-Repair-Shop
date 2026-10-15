@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div id="app-header"></div>
+  <div class="container">
+    <h2>👥 Manage Customers</h2>
+
+    <div class="card">
+      <h3>Add / Edit Customer</h3>
+      <form id="customerForm" class="form-grid">
+        <input id="name" placeholder="Name" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="phone" placeholder="Phone" required>
+        <input id="address" placeholder="Address">
+        <button class="btn" type="submit">Save Customer</button>
+        <button class="btn warn" type="button" id="resetBtn">Reset</button>
+      </form>
+      <div id="msg"></div>
+    </div>
+
+    <div class="card">
+      <input id="searchBox" placeholder="🔍 Search by name / email / phone"
+        style="padding:10px; width:100%; max-width:400px; margin-bottom:12px;
+        background:var(--bg-input); border:1px solid var(--border);
+        border-radius:var(--radius); color:var(--text-primary);">
+      <table id="customersTable">
+        <thead><tr>
+          <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Address</th><th>Actions</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/customers.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Computer Repair Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-box">
+      <h2>Admin Login</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" value="admin" required>
+        <input type="password" id="password" placeholder="Password" value="admin123" required>
+        <button type="submit">Sign In →</button>
+        <div id="msg" class="message"></div>
+        <p style="margin-top:20px; font-size:0.8rem; color:var(--text-muted); text-align:center;">
+          Default: <strong style="color:var(--text-secondary);">admin / admin123</strong>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
